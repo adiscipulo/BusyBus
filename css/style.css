@@ -1,59 +1,259 @@
 *, *:before, *:after {
-  box-sizing: border-box; /* box-sizing to border-box (4) */
+	box-sizing: border-box;
 }
-
 body {
-  background-color: #333;
-  font-family: sans-serif;
-  font-size: 10px;
+	background-color: #333;
+	font-family: SF Pro Text;
+	color: #000000;
 }
-
 .container {
-  margin: 0 auto;
-  width: 420px;
+	margin: 0 auto;
+	width: 375px;
 }
+/*Styles nav bar - Start*/
 
 nav {
-  margin: 0 auto;
-  padding: 10px 0 15px 15px;
-  position: fixed;
-  width: 420px;
-  background-color: #000000; /* Black navbar */
+	position: fixed;
+	width: 375px;
+	height: 110px;
+	margin: 0 auto;
+	background-color: #5A2D83;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	color: #FFFFFF;
+	z-index: 1000;
+}
+#status-bar-left {
+	display: inline-block;
+	width: 33%;
+	padding: 0 0 0 3%;
+	font-size: 12px;
+	line-height: 14px;
+}
+#status-bar-center {
+	display: inline-block;
+	width: 33%;
+	margin: 0 auto;
+	padding: 2.5px 0 0 0;
+	text-align: center;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 14px;
+}
+#status-bar-right {
+	display: inline-block;
+	width: 30%;
+	text-align: right;
+	padding: 0 0 0 3%;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 14px;
+}
+#nav-bar {
+	padding: 7% 0 0 0;
+
+}
+#back {
+	display: inline-block;
+	width: 33%;
+	padding: 0 3%;
+
+	font-size: 17px;
+}
+#busybus-logo {
+	display: inline-block;
+	width: 33%;
+	margin: 0 auto;
+	font-size: 17px;
+	font-weight: 500;
+	text-align: center;
+	padding: 15px 0 0 0;
+}
+#ellipsis {
+	display: inline-block;
+	width: 30%;
+	text-align: right;
+	padding: 0 3% 0 0;
+
+}
+#bus-icon {
+	display: inline-block;
+	width: 10%;
+	text-align: right;
+	padding: 7% 8% 0 5%;
+
+}
+#search {
+	display: inline-block;
+	background: rgba(142, 142, 147, 0.3);
+	border-radius: 10px;
+	padding: 7px 29% 7px 14px;
+	color: #C4C4C4;
+}
+/*Styles nav bar - End*/
+
+/*Display Bar - Start*/
+
+.display {
+	position: absolute;
+	width: 375px;
+	background-color: #FFFFFF;
+	color: #5A2D83;
+	font-size: 12px;
+	z-index: auto;
+	transform: translateY(110px);
+}
+#line {
+	display: inline-block;
+	width: 14%;
+	padding: 0 0 0 20px;
+
+}
+#destination {
+	display: inline-block;
+	width: 55%;
+	margin: 0 auto;
+	text-align: left;
+	padding: 7px 0 0 10px;
+}
+#arrival-frequency {
+	display: inline-block;
+	width: 15%;
+	text-align: center;
+	padding: 7px 0 7px 0;
+
+}
+#filter {
+	display: inline-block;
+	width: 12%;
+	text-align: center;
+	padding: 10px 3% 7px 0;
+
+	font-size: 16px;
+}
+/*bus lines information*/
+
+.bus-list {
+	padding-top: 145px;
+	width: 375px;
+	margin: 0 auto;
+}
+/*Direction information*/
+
+#direction {
+	width: 375px;
+	background-color: #FFFFFF;
+	color: #5A2D83;
+	font-size: 15px;
+	font-weight: bold;
+	border-bottom: 1.5px solid #595959;
+}
+#bound {
+	width: 40%;
+	text-align: left;
+	padding: 10px 0 0 20px;
+
+}
+/*Styling for all bus arrival list items*/
+
+.bus-background {
+	position: absolute;
+	display: block;
+	width: 375px;
+	height: 71px;
+	background-color: #ffffff;
+}
+.bus {
+	position: relative;
+	display: block;
+	width: 375px;
+	height: 70px;
+}
+.bus:hover {
+	background-color: #DADADA;
+	border-radius: 15px;
+}
+/*Styling for bus info, displayed on the left-hand side*/
+
+.bus-info {
+	position: absolute;
+	display: inline-block;
+	width: 80%;
+	padding: 1% 0 1% 6%;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #333333;
+}
+.bus-info h2 {
+	display: inline-block;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 1.1em;
+	align-items: center;
+	font-size: 22px;
+	line-height: 26px;
+	align-items: center;
+	text-align: center;
+}
+.bus-info h5 {
+	display: inline-block;
+	font-size: 15px;
+	line-height: 1.2em;
+	padding: 0 0 0 10px;
+}
+/*Styling for arrival info, displayed on the right-hand side.*/
+
+.arrival-info {
+	position: absolute;
+	display: inline-block;
+	width: 30%;
+	padding: 5% 4% 1% 0;
+	top: 50%;
+	left: 70%;
+	transform: translateY(-50%);
+}
+.arrival-info h2 {
+	display: inline;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 1.2em;
+	text-align: right;
+}
+.arrival-info h3 {
+	display: inline;
+	font-size: 12px;
+	line-height: 1.2em;
+	text-align: right;
+}
+.arrival-info h6 {
+	display: inline;
+	font-size: 11px;
+	line-height: 1.2em;
+	text-align: right;
+}
+.time {
+	float: right;
+	margin: 0 auto;
+	color: #333333;
+}
+.frequency {
+	float: right;
+	margin: 0 auto;
+	color: #333333;
+}
+/*Text and icon styling for special cases such as an alert or a bus arriving now.*/
+
+.soon {
+	color: #FF0000;
+}
+.caution {
+	color: #F18623;
+}
+.outofservice {
+	color: #595959;
 }
 
-.restaurant-list {
-  padding-top: 45px;
-  width: 100%; /* restaurant-list width (6) */
-}
-/* lines below used to style the text (5) */
-h1 {
-  font-size: 1.7em;
-  font-weight: bold;
-  margin: 5px 0 5px 5px; /* top right bottom left; */
-}
-
-h3 {
-  font-size: 1.5em;
-  margin: 5px 0 5px 5px;
-}
-
-.location{
-  background-color: #dfdedf;
-  border-bottom: 1px solid #3b3a3b;
-  margin: 0 auto;
-  padding: 10px 0 15px 15px;
-}
-
-.location:hover{
-  background-color: #b4b2b4; /* change bg color when hovered over (7) */
-}
-
-.arrow{
-  float: right;
-  margin: 15px 15px 0 0; /* top right bottom left; */
-}
-
-.content
-{
-  display: inline-block;
+.na {
+	letter-spacing: 5px;
 }
